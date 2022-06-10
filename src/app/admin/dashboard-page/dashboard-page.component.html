@@ -1,12 +1,12 @@
 <div *ngIf="posts.length; else loading" >
     <div class="form-control">
-        <input type="text" placeholder="Найти пост..." [(ngModel)]="searchStr">
+        <input type="text" placeholder="Найти цель..." [(ngModel)]="searchStr">
     </div>
     <table class="table">
         <tbody>
             <tr *ngFor="let post of posts | searchPosts:searchStr; let idx = index">
                 <div class="thead">
-                    <td class="thead__idx">#{{ idx + 1 }}</td>
+                    <td class="thead__idx"># {{ idx + 1 }}</td>
                     <td class="thead__title">{{ post.title }}</td>
                 </div>
                 <td>{{ post.text }}</td>
